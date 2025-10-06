@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site Acessível</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Menu de controle para navegação e acessibilidade -->
+    <section class="top-control">
+        <div class="nav-shortcuts">
+            <button onclick="goTo('conteudo-principal')" aria-label="Ir para o conteúdo principal">Ir para o conteúdo [1]</button>
+            <button onclick="goTo('menu')" aria-label="Ir para o menu principal">Ir para o menu [2]</button>
+            <button onclick="goTo('search-box')" aria-label="Ir para a busca">Ir para a busca [3]</button>
+            <button onclick="goTo('rodape')" aria-label="Ir para o rodapé">Ir para o rodapé [4]</button>
+        </div>
+        <div class="accessibility-tools">
+            <button onclick="toggleContrast()" aria-label="Ativar/desativar alto contraste">Alto Contraste</button>
+            <button onclick="changeFontSize(1)" aria-label="Aumentar fonte">A+</button>
+            <button onclick="changeFontSize(-1)" aria-label="Diminuir fonte">A-</button>
+            <button onclick="resetFontSize()" aria-label="Redefinir tamanho da fonte">A0</button>
+        </div>
+    </section>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Meu Site Acessível</h1>
+        <!-- Campo de busca -->
+        <form class="search-form" role="search" aria-label="Formulário de busca">
+            <label for="search-box" class="sr-only">Buscar:</label>
+            <input id="search-box" type="text" placeholder="Buscar..." aria-label="Campo de busca">
+            <button type="submit">Buscar</button>
+        </form>
+    </header>
+
+    <!-- Menu de navegação -->
+    <nav id="menu" aria-label="Menu principal">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <main id="conteudo-principal">
+        <section>
+            <h2>Bem-vindo!</h2>
+            <p>
+                Este site foi desenvolvido com foco em <strong>acessibilidade</strong>, incluindo navegação por teclado, alto contraste e ajuste de fontes.
+            </p>
+        </section>
+
+        <!-- Barra lateral -->
+        <aside>
+            <h3>Destaques</h3>
+            <ul>
+                <li><a href="#">Notícia 1</a></li>
+                <li><a href="#">Notícia 2</a></li>
+                <li><a href="#">Notícia 3</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <!-- Rodapé -->
+    <footer id="rodape">
+        <p>&copy; 2025 - Meu Site Acessível. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
